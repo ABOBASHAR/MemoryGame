@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body oncontextmenu="return false;">
+    <nav>
+        <label class="top" >Memory Game</label>
+       <div class="list">
+       <ul>
+         <a><li>Home</li> </a>
+          <a href="stats.html"> <li>Statistics</li> </a>
+        <a class="active" href="Team.html"><li>Team</li></a>
+           
+       </ul>
+    </div>
+    </nav>
+    <div class="image">
+    <img src="logo.png" alt="faild not reload" width="150">
+   </div>
+    <div id="main-page" class="maindiv">
+        <h1 style="color: rgb(36, 149, 30);">Memory Game</h1><br>
+        <label for="player-name"></label>
+        <input type="text" id="player-name" required placeholder="Enter Your Name" autofocus><br><br>
+        <label for="difficulty-level" style="color: darkgreen;">Select difficulty:</label>
+        <select id="difficulty-level">
+            <option value="3">Easy</option>
+            <option value="5">Medium</option>
+            <option value="7">Hard</option>
+        </select><br>
+        <button onclick="startGame()">Start Game</button>
+    </div>
+    <div id="game-page" style="display: none;">
+        <h1 style="color: green;">Remember the Numbers</h1>
+        <div id="number-display"></div>
+        <input type="text" id="player-input" placeholder="Enter numbers here" autofocus>
+        <button onclick="submitNumbers()">Submit</button>
+        <div id="attempts-counter"><p style="color: green;">{Attempts:1/20}</p></div> 
+    </div>
+    <div id="result-page" style="display: none;">
+        <h1>Game Statistics</h1>
+        <table id="result-table">
+            <thead>
+                <tr>
+                    <th>Player</th>
+                    <th>Successes</th>
+                    <th>Failures</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
